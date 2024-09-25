@@ -66,30 +66,30 @@ def book_of_the_day(request):
     book_file_path = os.path.join(app_dir, "book.txt")
 
     books = {
-        1: "Tintin in the Land of the Soviets",
-        2: "Tintin in the Congo",
-        3: "Tintin in America",
-        4: "Cigars of the Pharaoh",
-        5: "The Blue Lotus",
-        6: "The Broken Ear",
-        7: "The Black Island",
-        8: "King Ottokar's Sceptre",
-        9: "The Crab with the Golden Claws",
-        10: "The Shooting Star",
-        11: "The Secret of the Unicorn",
-        12: "Red Rackham's Treasure",
-        13: "The Seven Crystal Balls",
-        14: "Prisoners of the Sun",
-        15: "Land of Black Gold",
-        16: "Destination Moon",
-        17: "Explorers on the Moon",
-        18: "The Calculus Affair",
-        19: "The Red Sea Sharks",
-        20: "Tintin in Tibet",
-        21: "The Castafiore Emerald",
-        22: "The Flight 714 to Sydney",
-        23: "Tintin and the Picaros",
-        24: "Tintin and Alph-Art"
+        0: "Tintin in the Land of the Soviets",
+        1: "Tintin in the Congo",
+        2: "Tintin in America",
+        3: "Cigars of the Pharaoh",
+        4: "The Blue Lotus",
+        5: "The Broken Ear",
+        6: "The Black Island",
+        7: "King Ottokar's Sceptre",
+        8: "The Crab with the Golden Claws",
+        9: "The Shooting Star",
+        10: "The Secret of the Unicorn",
+        11: "Red Rackham's Treasure",
+        12: "The Seven Crystal Balls",
+        13: "Prisoners of the Sun",
+        14: "Land of Black Gold",
+        15: "Destination Moon",
+        16: "Explorers on the Moon",
+        17: "The Calculus Affair",
+        18: "The Red Sea Sharks",
+        19: "Tintin in Tibet",
+        20: "The Castafiore Emerald",
+        21: "The Flight 714 to Sydney",
+        22: "Tintin and the Picaros",
+        23: "Tintin and Alph-Art"
     }
 
     # Get current date
@@ -114,8 +114,10 @@ def book_of_the_day(request):
     # Read the book number from 'book.txt'
     with open(book_file_path, "r") as cile:
         bontent = int(cile.read().strip())  # Convert back to integer
+        c=int(bontent)
 
     # Pass the corresponding book to the template
-    return render(request, 'bookoftheday.html', {'book': books[bontent]})
+    return render(request, 'bookoftheday.html', {'book': books[bontent], 'no': c})
+
 def author(request):
     return render(request, 'author.html')
