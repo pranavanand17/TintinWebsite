@@ -1,0 +1,293 @@
+{% load static %}
+	.image-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 10px;
+        }
+
+        .red-btn {
+                background-color: #ff0000;
+                border-color: #ff0000;
+                border-radius: 10px;
+        }
+
+        .red-link {
+                background-color: #ff0000;
+                color: #fff;
+        }
+
+        .yellow-btn{
+                background-color: #ffd700;
+                border-color: #ffd700;
+                border-radius: 10px;
+        }
+	.yellow-link{
+                background-color: #ffd700;
+                color: #fff;
+        }
+
+        .green-link {
+                background-color: #28a745;
+                color: #fff;
+        }
+
+        .green-btn {
+                background-color: #28a745;
+                border-color: #28a745;
+                border-radius: 10px;
+        }
+
+        .gold-link {
+                background-color: #ffc107;
+                color: #fff;
+        }
+
+        .gold-btn {
+                background-color: #ffc107;
+                border-color: #ffc107;
+                border-radius: 10px;
+        }
+
+        .blue-link {
+                background-color: #007bff;
+                color: #fff;
+        }
+
+        .blue-btn {
+                background-color: #007bff;
+                border-color: #007bff;
+                border-radius: 10px;
+        }
+	 .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+
+    .carousel-inner img {
+      width: 100%;
+      margin: auto;
+      min-height: 200px;
+    }
+
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none;
+      }
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #land:hover {
+    background-image: url('/mnt/c/Users/prana/TinTinMarket/TintinWebpage/tintin/app/static/images/land.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#land:hover {
+    background-image: url('/static/images/land.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#land:hover .red-link {
+    opacity: 0;
+}
+#congo:hover {
+    background-image: url('/static/images/congo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#congo:hover .red-link {
+    opacity: 0;
+}
+#america:hover {
+    background-image: url('/static/images/america.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#america:hover .red-link {
+    opacity: 0;
+}
+#cigars:hover {
+    background-image: url('/static/images/cigars.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#cigars:hover .blue-link {
+    opacity: 0;
+}
+#lotus:hover {
+    background-image: url('/static/images/lotus.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#lotus:hover .blue-link {
+    opacity: 0;
+}
+#ear:hover {
+    background-image: url('/static/images/ear.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#ear:hover .red-link {
+    opacity: 0;
+}
+#island:hover {
+    background-image: url('/static/images/island.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#island:hover .red-link {
+    opacity: 0;
+}
+#sceptre:hover {
+    background-image: url('/static/images/sceptre.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#sceptre:hover .blue-link {
+    opacity: 0;
+}
+#crab:hover {
+    background-image: url('/static/images/crab.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#crab:hover .red-link {
+    opacity: 0;
+}
+#star:hover {
+    background-image: url('/static/images/star.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#star:hover .gold-link {
+    opacity: 0;
+}
+#unicorn:hover {
+    background-image: url('/static/images/unicorn.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#unicorn:hover .green-link {
+    opacity: 0;
+}
+#treasure:hover {
+    background-image: url('/static/images/treasure.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#treasure:hover .gold-link {
+    opacity: 0;
+}
+#crystal:hover {
+    background-image: url('/static/images/crystal.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#crystal:hover .gold-link {
+    opacity: 0;
+}
+#sun:hover {
+    background-image: url('/static/images/sun.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#sun:hover .red-link {
+    opacity: 0;
+}
+#gold:hover {
+    background-image: url('/static/images/gold.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#gold:hover .gold-link {
+    opacity: 0;
+}
+#destination:hover {
+    background-image: url('/static/images/destination.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#destination:hover .gold-link {
+    opacity: 0;
+}
+#explorers:hover {
+    background-image: url('/static/images/explorers.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#explorers:hover .green-link {
+    opacity: 0;
+}
+#affair:hover {
+    background-image: url('/static/images/affair.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#affair:hover .green-link {
+    opacity: 0;
+}
+#sharks:hover {
+    background-image: url('/static/images/sharks.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#sharks:hover .red-link {
+    opacity: 0;
+}
+#tibet:hover {
+    background-image: url('/static/images/tibet.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#tibet:hover .red-link {
+    opacity: 0;
+}
+#emerald:hover {
+    background-image: url('/static/images/emerald.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#emerald:hover .gold-link {
+    opacity: 0;
+}
+#sydney:hover {
+    background-image: url('/static/images/sydney.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#sydney:hover .red-link {
+    opacity: 0;
+}
+#picaros:hover {
+    background-image: url('/static/images/picaros.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#picaros:hover .yellow-link {
+    opacity: 0;
+}
+#alph:hover {
+    background-image: url('/static/images/art.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#alph:hover .red-link {
+    opacity: 0;
+}
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Webpage Layout</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    {% load static %}
+    <style>
+    body {
+      background-color: #333;
+      color: whitesmoke;
+    }
+
+        .container {
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+	    border-color: white;
+	    border-width: thick;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .image {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .text {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .video {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+    </style>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+          <a class="navbar-brand" href="/"><img src="{% static 'images/icon.png' %}" alt="Logo" style="width: 50px; height:50px;">
+                <span style="display: inline-block; vertical-align: middle; color: white; font-family: Comic Sans MS">Home of Tintin</span>
+      </a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"><img src="{% static 'images/arrow.png' %}" alt="arrow" style="height: 20px; width: 20px;"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/" class="active" style="color: white; font-size:1.5em; font-family: Comic Sans MS">Homepage</a></li>
+	 <li><a href="/library/" style="color: white; font-size:1.5em; font-family: Comic Sans MS">Read The Albums</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+    </div>
+  	</div>
+	</nav>
+	<center><h1>All About Tintin And It's Creator</h1></center>
+	<center><div class="container">
+	    <center><img src="image1.jpg" alt="Image 1" class="image"></center>
+        <p class="text">This is some text between the first and second image.</p>
+	<center><img src="image2.jpg" alt="Image 2" class="image"><center>
+        <p class="text">This is some text between the second and third image.</p>
+	<center><img src="image3.jpg" alt="Image 3" class="image"><center>
+        <p class="text">This is some text below the third image and above the video.</p>
+        <video class="video" controls>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+	</div></center>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+</html>
+

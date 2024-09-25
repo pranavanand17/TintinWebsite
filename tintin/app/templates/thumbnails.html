@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=author content="Pranav Anand">
+    <title>TinTin Books</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <meta name="description" content="This is webpage for the extended Tintin library">
+    {% load static %}
+    <link rel="icon" href="{% static 'images/icon.png' %}" type="image/x-icon" style="width: 100%; height:100%">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+	
+	body{
+		background-color: #333;
+		color: whitesmoke;
+	}
+	.image-container img {
+            width: 100%;
+            height: auto;
+    	}
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+          <a class="navbar-brand" href="/"><img src="{% static 'images/icon.png' %}" alt="Logo" style="width: 50px; height:50px;">
+                <span style="display: inline-block; vertical-align: middle; color: white; font-family: Comic Sans MS">Home of Tintin</span>
+      </a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"><img src="{% static 'images/arrow.png' %}" alt="arrow" style="height: 20px; width: 20px;"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/" class="active" style="color: white; font-size:1.5em; font-family: Comic Sans MS">Homepage</a></li>
+        <li><a href="/author/" style="color: white; font-size:1.5em; font-family: Comic Sans MS">Tintin Essentials</a></li></span>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+    </div>
+  </div>
+</nav>
+    <h1 class="text-center">All the Albums</h1>
+    <div class="container">
+        <div class="image-container">
+            {% for image_path in image_paths %}
+                <img src="{{ image_path }}" alt="Image">
+		 {% if forloop.counter0 == 0 %}
+		 	<button type="button" id="land" class="red-btn"><a href="{% static 'media/pdfs/LandOfSoviets.pdf' %}" class="red-link">The Adventures Of TinTin In The Land Of The Soviets</a></button>
+		{% elif forloop.counter0 == 1 %}
+                        <button type="button" id="congo" class="red-btn"><a href="{% static 'media/pdfs/InTheCongo.pdf' %}" class="red-link">The Adventures Of TinTin In The Congo</a></button>
+		 {% elif forloop.counter0 == 2 %}
+                        <button type="button" id="america" class="red-btn"><a href="{% static 'media/pdfs/InAmerica.pdf' %}" class="red-link">The Adventures Of TinTin In America</a></button>
+		{% elif forloop.counter0 == 3 %}
+                        <button type="button" id="cigars" class="blue-btn"><a href="{% static 'media/pdfs/CigarsOfThePharoah.pdf' %}" class="blue-link">The Adventures Of TinTin Cigars Of The Pharaoh</a></button>
+                 {% elif forloop.counter0 == 4 %}
+                        <button type="button" id="lotus" class="blue-btn"><a href="{% static 'media/pdfs/TheBlueLotus.pdf' %}" class="blue-link">The Adventures Of TinTin The Blue Lotus</a></button>
+		{% elif forloop.counter0 == 5 %}
+                        <button type="button" id="ear" class="red-btn"><a href="{% static 'media/pdfs/TheBrokenEar.pdf' %}" class="red-link">The Adventures Of TinTin The Broken Ear</a></button>
+                 {% elif forloop.counter0 == 6 %}
+                        <button type="button" id="island" class="red-btn"><a href="{% static 'media/pdfs/TheBlackIsland.pdf' %}" class="red-link">The Adventures Of TinTin In The Black Island</a></button>
+                {% elif forloop.counter0 == 7 %}
+                        <button type="button" id="sceptre" class="blue-btn"><a href="{% static 'media/pdfs/KingOttokarsSceptre.pdf' %}" class="blue-link">The Adventures Of TinTin King Ottokar's Sceptre</a></button>
+                 {% elif forloop.counter0 == 8 %}
+                        <button type="button" id="crab" class="red-btn"><a href="{% static 'media/pdfs/CrabWithTheGoldenClaws.pdf' %}" class="red-link">The Adventures Of TinTin The Crab With The Golden Claws</a></button>
+		 {% elif forloop.counter0 == 9 %}
+                        <button type="button" id="star" class="gold-btn"><a href="{% static 'media/pdfs/TheShootingStar.pdf' %}" class="gold-link">The Adventures Of TinTin The Shooting Star</a></button>
+                 {% elif forloop.counter0 == 10 %}
+                        <button type="button" id="unicorn" class="green-btn"><a href="{% static 'media/pdfs/TheSecretOfTheUnicorn.pdf' %}" class="green-link">The Adventures Of TinTin The Secret Of The Unicorn</a></button>
+                {% elif forloop.counter0 == 11 %}
+                        <button type="button" id="treasure" class="gold-btn"><a href="{% static 'media/pdfs/RedRackhamsTreasure.pdf' %}" class="gold-link">The Adventures Of TinTin Red Rackham's Treasure</a></button>
+                 {% elif forloop.counter0 == 12 %}
+                        <button type="button" id="crystal" class="gold-btn"><a href="{% static 'media/pdfs/TheSevenCrystalBalls.pdf' %}" class="gold-link">The Adventures Of TinTin The Seven Crystal Balls</a></button>
+                {% elif forloop.counter0 == 13 %}
+                        <button type="button" id="sun" class="red-btn"><a href="{% static 'media/pdfs/PrisonersOfTheSun.pdf' %}" class="red-link">The Adventures Of TinTin Prisoners Of The Sun</a></button>
+                 {% elif forloop.counter0 == 14 %}
+                        <button type="button" id="gold" class="gold-btn"><a href="{% static 'media/pdfs/LandOfBlackGold.pdf' %}" class="gold-link">The Adventures Of TinTin Land Of Black Gold</a></button>
+                {% elif forloop.counter0 == 15 %}
+                        <button type="button" id="destination" class="gold-btn"><a href="{% static 'media/pdfs/DestinationMoon.pdf' %}" class="gold-link">The Adventures Of TinTin Destination Moon</a></button>
+                 {% elif forloop.counter0 == 16 %}
+                        <button type="button" id="explorers" class="green-btn"><a href="{% static 'media/pdfs/ExplorersOnTheMoon.pdf' %}" class="green-link">The Adventures Of TinTin Explorers On The Moon</a></button>
+		 {% elif forloop.counter0 == 17 %}
+                        <button type="button" id="affair" class="green-btn"><a href="{% static 'media/pdfs/TheCalculusAffair.pdf' %}" class="green-link">The Adventures Of TinTin The Calculus Affair</a></button>
+                 {% elif forloop.counter0 == 18 %}
+                        <button type="button" id="sharks" class="red-btn"><a href="{% static 'media/pdfs/TheRedSeaSharks.pdf' %}" class="red-link">The Adventures Of TinTin The Red Sea Sharks</a></button>
+                {% elif forloop.counter0 == 19 %}
+                        <button type="button" id="tibet" class="red-btn"><a href="{% static 'media/pdfs/InTibet.pdf' %}" class="red-link">The Adventures Of TinTin TinTin In Tibet</a></button>
+                 {% elif forloop.counter0 == 20 %}
+                        <button type="button" id="emerald" class="gold-btn"><a href="{% static 'media/pdfs/TheCastafioreEmerald.pdf' %}" class="gold-link">The Adventures Of TinTin The Castafiore Emerald</a></button>
+                {% elif forloop.counter0 == 21 %}
+                        <button type="button" id="sydney" class="red-btn"><a href="{% static 'media/pdfs/Flight714.pdf' %}" class="red-link">The Adventures Of TinTin Flight 714 To Sydney</a></button>
+                 {% elif forloop.counter0 == 22 %}
+                        <button type="button" id="picaros" class="yellow-btn"><a href="{% static 'media/pdfs/ThePicaros.pdf' %}" class="yellow-link">The Adventures Of TinTin TinTin And The Picaros</a></button>
+                {% elif forloop.counter0 == 23 %}
+                        <button type="button" id="alph" class="red-btn"><a href="{% static 'media/pdfs/AlphArt.pdf' %}" class="red-link">TinTin And Alph-Art</a></button>
+			{% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <p><center><button class="btn btn-primary"><a href="/" class="text-white">Go Back</a></button></center></p>
+	<footer><center>&copy;Herge &copy;Egmont</center></footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+</html>
+
