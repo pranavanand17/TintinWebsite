@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Of The Day</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+	{% csrf_token %}
+	<center><h1>This is today's book of the day!<h1></center>
+	<p>{{ book }}</p>
+	
+</body>
+</html>
+
